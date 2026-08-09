@@ -1,0 +1,22 @@
+echo $0    #current shell
+echo $$    #current PID
+bash       #start bash shell
+exit       #logout of current shell
+
+whoami     #current user
+hostname   #name of the host machine
+
+pwd        #print working directory
+ls         #list files
+ls -a      #list hidden files as well
+ll         #long list files
+ll -a      #long list hidden files as well
+ll -R      #long list in alphabetical order
+ll -t      #long list in modification order (new first)
+ll -rt     #longlist in reverse modification order (old first))
+
+cd /path   #enter inside a directory
+cd ~       #enter user's home directory
+cd -       #enter previous directory you were in
+cd ..      #enter one parent directory above your current
+
