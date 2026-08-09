@@ -1,12 +1,12 @@
-whoami     #current user
-hostname   #name of the host machine
-
-echo       #prints anything that follows it
+uname      #current Linux information 
 echo $0    #current shell
 echo $$    #current PID
 bash       #start new bash shell
 exit       #logout of current shell
-
+whoami     #current user
+hostname   #name of the host machine
+man        #manual page for the command
+--help     #help page for the command
 clear      #clear your terminal
 history    #list of previously used commands in current shell
 
@@ -31,23 +31,23 @@ rm         #deletes files
 rm -r      #deletes directories
 rm -rf     #deletes everything with force
 
-ln         #create hard link
-ln -s      #create soft link
+ln         #create a hard link
+ln -s      #create a soft link
 
 mkdir      #create a directory
 mkdir -p   #create nested directories
 touch      #create a blank file or update the timestamp of any file
-cat        #read the contents of the file
 vim        #editor used to edit the file
 nano       #another editor
 >          #Redirects output with overwrite
 &>         #Redirect both output and error with overwrite
 >>         #Redirect output with append
-&>>        #Redirect both output and error message with append
+&>>        #Redirects both output and error message with append
 |          #Pipe pushes the output of the 1st command as input to the 2nd command and so on.
 
-
-
+cat        #read the contents of the file
+head -n    #read n number of lines from top
+tail -n    #read n number of lines from bottom
 
 
 
