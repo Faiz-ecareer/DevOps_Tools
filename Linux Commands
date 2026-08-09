@@ -39,12 +39,11 @@ nano       #another editor
 &>         #Redirect both output and error with overwrite
 >>         #Redirect output with append
 &>>        #Redirects both output and error message with append
-|          #Pipe pushes the output of the 1st command as input to the 2nd command and so on.
-
 cat        #read the contents of the file
 head -n    #read n number of lines from top
 tail -n    #read n number of lines from bottom
-
+|          #Pipe pushes the output of the 1st command as input to the 2nd command and so on.
+grep       #grabs the required keyword from an output.
 
 
 
