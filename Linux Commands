@@ -1,12 +1,11 @@
-uname      #current Linux information 
+uname -a   #system information
+whoami     #current user
+hostname   #name of the host machine
 echo $0    #current shell
 echo $$    #current PID
 bash       #start new bash shell
 exit       #logout of current shell
-whoami     #current user
-hostname   #name of the host machine
-man        #manual page for the command
---help     #help page for the command
+
 clear      #clear your terminal
 history    #list of previously used commands in current shell
 
