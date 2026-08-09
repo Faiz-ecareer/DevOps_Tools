@@ -6,9 +6,6 @@ echo $$    #current PID
 bash       #start new bash shell
 exit       #logout of current shell
 
-clear      #clear your terminal
-history    #list of previously used commands in current shell
-
 pwd        #print working directory
 ls         #list files
 ls -a      #list hidden files as well
@@ -47,6 +44,7 @@ nano       #another editor
 cat        #read the contents of the file
 head -n    #read n number of lines from top
 tail -n    #read n number of lines from bottom
+
 
 
 
