@@ -1,50 +1,76 @@
-uname -a   #system information
-whoami     #current user
-hostname   #name of the host machine
-echo $0    #current shell
-echo $$    #current PID
-bash       #start new bash shell
-exit       #logout of current shell
+uname -a              #system information
+whoami                #current user
+hostname              #name of the host machine
 
-pwd        #print working directory
-ls         #list files
-ls -a      #list hidden files as well
-ll         #long list files
-ll -a      #long list hidden files as well
-ll -R      #long list in alphabetical order
-ll -t      #long list in modification order (new first)
-ll -rt     #longlist in reverse modification order (old first))
+echo $0               #current shell
+echo $$               #current PID
+bash                  #start new bash shell
+exec bash             #Replaces current shell with a new shell
+exit                  #logout of current shell
 
-cd /path   #enter inside a directory
-cd ~       #enter user's home directory
-cd -       #enter previous directory you were in
-cd ..      #enter one parent directory above your current
+pwd                   #print working directory
+ls                    #list files
+ls -a                 #list hidden files as well
+ll                    #long list files
+ll -a                 #long list hidden files as well
+ll -R                 #long list in alphabetical order
+ll -t                 #long list in modification order (new first)
+ll -rt                #longlist in reverse modification order (old first)
+cd /path              #enter inside a directory
+cd ~                  #enter user's home directory
+cd -                  #enter previous directory you were in
+cd ..                 #enter one parent directory above your current
 
-cp         #copy files
-cp -r      #copy directories
-mv         #move files & directories or rename one file
-rm         #deletes files
-rm -r      #deletes directories
-rm -rf     #deletes everything with force
+cp                    #copy files
+cp -r                 #copy directories
+mv                    #move files & directories or rename one file
+rm                    #deletes files
+rm -r                 #deletes directories
+rm -rf                #deletes everything with force
 
-ln         #create a hard link
-ln -s      #create a soft link
+ln                    #create a hard link
+ln -s                 #create a soft link
 
-mkdir      #create a directory
-mkdir -p   #create nested directories
-touch      #create a blank file or update the timestamp of any file
-vim        #editor used to edit the file
-nano       #another editor
->          #Redirects output with overwrite
-&>         #Redirect both output and error with overwrite
->>         #Redirect output with append
-&>>        #Redirects both output and error message with append
-cat        #read the contents of the file
-head -n    #read n number of lines from top
-tail -n    #read n number of lines from bottom
-|          #Pipe pushes the output of the 1st command as input to the 2nd command and so on.
-grep       #grabs the required keyword from an output.
+mkdir                 #create a directory
+mkdir -p              #create nested directories
+touch                 #create a blank file or update the timestamp of any file
+vim                   #editor used to edit the file
+nano                  #another editor
+>                     #Redirects output with overwrite
+>>                    #Redirect output with append
+&>                    #Redirect both output and error with overwrite
+&>>                   #Redirects both output and error message with append
+cat                   #read the contents of the file
+head -n               #read n number of lines from top
+tail -n               #read n number of lines from bottom
+|                     #Pipe pushes the output of the 1st command as input to the 2nd command and so on.
+grep                  #grabs the required keyword from an output.
 
+id                    #user's details- UID, GID, Group, Secondary Groups
+su                    #switch user
+passwd                #change user password
+useradd               #create user
+userdel               #removes user
+userdel -r            #removes user with its home directory
+usermod               #modify existing user
+groupadd              #creates secondary group 
+gropdel               #removes group
+groupmod              #modify group
+gpasswd -a            #adds user to secondary group
+gpasswd -d            #removes user from secondary group
+usermod -g            #change primary group of user
+usermod -G            #change secondary group of user to this one
+chage                 #user's password policy modifications
+usermod -L            #locks user
+usermod -U            #unlocks user
+usermod -s /sbin/nologin    #Take away shell
+usermod -s /bin/bash        #Give shell
 
+chown <user:group>    #change ownership of file/directory 
+chown -R              #change ownership recursively
+chmod <####>          #change permissions
+chmod -R              #change permissions recursively
+umask                 #to check default permission setting to subtract from 0777
+umask <####>          #temporary modify default setting to subtract from 0777
 
 
