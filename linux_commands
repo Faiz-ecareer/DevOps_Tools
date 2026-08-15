@@ -1,3 +1,5 @@
+# Shell Basics
+
 uname -a              #system information
 whoami                #current user
 hostname              #name of the host machine
@@ -8,6 +10,8 @@ bash                  #start new bash shell
 exec bash             #Replaces current shell with a new shell
 exit                  #logout of current shell
 
+# Files and Directories
+
 pwd                   #print working directory
 ls                    #list files
 ls -a                 #list hidden files as well
@@ -16,7 +20,7 @@ ll -a                 #long list hidden files as well
 ll -R                 #long list in alphabetical order
 ll -t                 #long list in modification order (new first)
 ll -rt                #longlist in reverse modification order (old first)
-cd /path              #enter inside a directory
+cd </path>            #enter inside a directory
 cd ~                  #enter user's home directory
 cd -                  #enter previous directory you were in
 cd ..                 #enter one parent directory above your current
@@ -40,11 +44,44 @@ nano                  #another editor
 >>                    #Redirect output with append
 &>                    #Redirect both output and error with overwrite
 &>>                   #Redirects both output and error message with append
+
 cat                   #read the contents of the file
-head -n               #read n number of lines from top
-tail -n               #read n number of lines from bottom
-|                     #Pipe pushes the output of the 1st command as input to the 2nd command and so on.
-grep                  #grabs the required keyword from an output.
+head <-n>             #read n number of lines from top
+tail <-n>             #read n number of lines from bottom
+|                     #Pipe pushes the output of the 1st command as input to the 2nd command and so on
+
+grep                  #grabs the required keyword
+find                  #finds files and directories
+locate                #finds faster using database
+which                 #finds executable programs location
+whereis               #finds programs and its documentations as well
+
+# Archieving and Compressing Files
+
+tar -cf <.tar> <file> #create archive (uncompressed)
+tar -tf <.tar>        #lists content inside
+tar -xf <.tar>        #extract 
+
+tar -czf <.tar.gz>    #creates archive (compressed - gzip)
+tar -xzf <.tar.gz>    #extract compressed - gzip
+gzip <file>           #compress a file using- gzip
+gzip -l               #check uncompressed size without uncompressing it
+gunzip <file.gz>      #uncompress using- gzip
+
+tar -cjf <.tar.bz2>   #creates archive (compressed - bzip2)
+tar -xjf <.tar.bz2>   #extract compressed - bzip2
+bzip2 <file>          #compress a file using- bzip2
+bzip2 -l              #check uncompressed size without uncompressing it
+bunzip2 <file.bz2>    #uncompress using- bzip2
+
+tar -cJf <.tar.xz>    #creates archive (compressed - xz)
+tar -xJf <.tar.xz>    #extract compressed - xz
+xz <file>             #compress a file using- xz
+xz -l                 #check uncompressed size without uncompressing it
+unxz <file.xz>        #uncompress using- xz
+
+
+# User and Group Management
 
 id                    #user's details- UID, GID, Group, Secondary Groups
 su                    #switch user
@@ -66,6 +103,8 @@ usermod -U            #unlocks user
 usermod -s /sbin/nologin    #Take away shell
 usermod -s /bin/bash        #Give shell
 
+# File Ownership and Permissions
+
 chown <user:group>    #change ownership of file/directory 
 chown -R              #change ownership recursively
 chmod <####>          #change permissions
@@ -73,4 +112,8 @@ chmod -R              #change permissions recursively
 umask                 #to check default permission setting to subtract from 0777
 umask <####>          #temporary modify default setting to subtract from 0777
 
+# Software Packages
 
+apt                   #Debian Package manager
+
+dnf/yum               #Redhat package manager
