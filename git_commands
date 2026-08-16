@@ -8,20 +8,42 @@ git config --list                          #list all configuration
 
 # Getting started
 
-git init                                   # initialise git inside a directory
-git clone <url>                            #copy git repo from remote
+git init                                   #initialise git inside a directory
+git clone <url>                            #initialise by copying git repo from remote
 git status                                 #show working tree status
 git log --oneline --graph --all            #check commit history
 
+git add <file>                             #stage 
+git commit -m "message"                    #commit
+git commit -am "message"                   #stage and commit
+
+git diff                                   #what changed but not staged
+git diff --staged                          #what staged but not commited
+
 ## Remotes
 
-git remote -v                              #list remote repo
+git remote -v                              #list remote
 git remote show <alias>                    #show remote details
-git remote add <alias> <url>               
-git remote set-url <alias> <url>
-git remote remove <alias>
-git fetch <alias>
-git push -u <alias> <your_branch>
-git pull -u <alias> <your_branch>
-git push <alias> <your_branch>
-git pull <alias> <your_branch>
+git remote add <alias> <url>               #add remote with an alias
+git remote set-url <alias> <url>           #change remote url for an alias
+git remote remove <alias>                  #remove a remote
+
+git push <alias> <your_branch>             #push to a remote branch
+git pull <alias> <your_branch>             #copy from a remote and merge to current branch
+
+git branch -vv                             #upstream tracking list
+git branch -u <alias/branch>               #sets upstream for current branch
+git push -u <alias> <your_branch>          #push and set upstream for current branch
+git push                                   #automatically push to default upstream for current branch
+git pull                                   #automatically pull from default upstream of current branch
+
+git branch -r                              #list remote branches (that have been fetched)
+git log <alias>/branch>                     #list commits inside remote alias branche
+git ls-tree -r --name-only <alias/branch>  #list files inside remote alias/branch
+
+git fetch <alias>                          #copy everything from remote server, keep at alias
+git fetch --prune                          #automatically sync the remote alias to remote server 
+git restore --source=<alias/branch> file   #copy from remote alias to local
+
+
+
