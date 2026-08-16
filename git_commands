@@ -10,6 +10,7 @@ git config --list                          #list all configuration
 
 git init                                   #initialise git inside a directory
 git clone <url>                            #initialise by copying git repo from remote
+
 git status                                 #show working tree status
 git log --oneline --graph --all            #check commit history
 
@@ -17,8 +18,13 @@ git add <file>                             #stage
 git commit -m "message"                    #commit
 git commit -am "message"                   #stage and commit
 
-git diff                                   #what changed but not staged
-git diff --staged                          #what staged but not commited
+git diff                                   #exactly what is changed but not staged
+git restore <file>                         #discard changes if not staged
+git diff --staged                          #exactly what is staged but not committed
+git restore --staged <file>                #unstage the file if not commited
+
+git revert <commit>                        #creates a new commit by undoing an old commit
+git reset --hard <commit>                  #Moves current branch head to a particular commit
 
 ## Remotes
 
@@ -45,5 +51,5 @@ git fetch <alias>                          #copy everything from remote server, 
 git fetch --prune                          #automatically sync the remote alias to remote server 
 git restore --source=<alias/branch> file   #copy from remote alias to local
 
-
+git reset --hard <alias/branch>            #Forcefully aligns your local branch with remote alias
 
