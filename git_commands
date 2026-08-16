@@ -1,0 +1,27 @@
+## Setup and Config
+
+git --version                              #git version installed
+git help <command>                         #help
+git config --global user.name <name>       #global setting up name
+git config --global user.email <email>     #global setting up email
+git config --list                          #list all configuration
+
+# Getting started
+
+git init                                   # initialise git inside a directory
+git clone <url>                            #copy git repo from remote
+git status                                 #show working tree status
+git log --oneline --graph --all            #check commit history
+
+## Remotes
+
+git remote -v                              #list remote repo
+git remote show <alias>                    #show remote details
+git remote add <alias> <url>               
+git remote set-url <alias> <url>
+git remote remove <alias>
+git fetch <alias>
+git push -u <alias> <your_branch>
+git pull -u <alias> <your_branch>
+git push <alias> <your_branch>
+git pull <alias> <your_branch>
