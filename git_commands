@@ -11,25 +11,20 @@ git config --list                          #list all configuration
 
 git init                                   #initialise git inside a directory
 git clone <url>                            #initialise by copying git repo from remote
-
 git status                                 #show working tree status
 git log --oneline --graph --all            #check commit history and commit hash
-
 git add <file>                             #stage 
 git commit -m "message"                    #commit
 git commit -am "message"                   #stage and commit
-
 git diff                                   #exactly what is changed but not staged
 git restore <file>                         #discard changes if not staged
 git diff --staged                          #exactly what is staged but not committed
 git restore --staged <file>                #unstage the file if not commited
 git show <commit>                          #show commit details
-
 git revert <commit>                        #creates a new commit by undoing an old commit
 git reset --soft <commit>                  #Reset to a commit and keep changes staged
 git reset --mixed <commit>                 #Reset to a commit and keep changes unstaged
 git reset --hard <commit>                  #Reset to a commit and totally discard changes
-
 git reflog                                 #Saves every movement, mistakes, edits and drafts.
 
 ## Branch
@@ -37,17 +32,14 @@ git reflog                                 #Saves every movement, mistakes, edit
 git branch                                 #shows local branches
 git branch -r                              #shows remote branches at alias
 git branch -vv                             #shows upstream links between local and remote branches 
-
 git branch <name>                          #create a new branch
 git switch -c <new branch>                 #create a new branch and switch to it
 git branch -m <new-name>                   #renames the current branch (if a branch with the same name doesn't exist)
 git branch -M <new-name>                   #force renames the current branch (even if a branch with the same name exists)
 git branch -d <branch>                     #safely deletes branch after checking merger
 git branch -D <branch>                     #force deletes the branch
-
 git switch <branch>                        #switch to another branch
 git switch --detach <hash>                 #jump to a commit within the current branch
-
 git merge <branch>                         #creates the commit by merging the called branch to the current branch
 git merge --abort                          #rollback the repo as it was before the merge
 git rebase <branch>                        #without creating a new commit, it moves the current branch commits over the top of the commits of the called branch 
@@ -74,20 +66,16 @@ git remote show <alias>                    #show remote details
 git remote add <alias> <url>               #add remote with an alias
 git remote set-url <alias> <url>           #change remote url for an alias
 git remote remove <alias>                  #remove a remote
-
 git push <alias> <your_branch>             #push to a remote branch
 git pull <alias> <your_branch>             #copy from a remote and merge to current branch
-
 git branch -vv                             #upstream tracking list
 git branch -u <alias/branch>               #sets upstream for current branch
 git push -u <alias> <your_branch>          #push and set upstream for current branch
 git push                                   #automatically push to default upstream for current branch
 git pull                                   #automatically pull from default upstream of current branch
-
 git branch -r                              #list remote branches (that have been fetched)
 git log <alias>/branch>                    #list commits inside remote alias branche
 git ls-tree -r --name-only <alias/branch>  #list files inside remote alias/branch
-
 git fetch <alias>                          #copy everything from remote server, keep at alias
 git fetch --prune                          #automatically sync the remote alias to remote server 
 git restore --source=<alias/branch> file   #copy from remote alias to local
