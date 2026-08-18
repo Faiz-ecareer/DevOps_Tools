@@ -40,10 +40,13 @@ git branch -vv                             #shows upstream links between local a
 
 git branch <name>                          #create a new branch
 git switch -c <new branch>                 #create a new branch and switch to it
-git switch <branch>                        #switch to another branch
-git switch --detach <hash>                 #jump to a commit within the current branch
+git branch -m <new-name>                   #renames the current branch (if a branch with the same name doesn't exist)
+git branch -M <new-name>                   #force renames the current branch (even if a branch with the same name exists)
 git branch -d <branch>                     #safely deletes branch after checking merger
 git branch -D <branch>                     #force deletes the branch
+
+git switch <branch>                        #switch to another branch
+git switch --detach <hash>                 #jump to a commit within the current branch
 
 git merge <branch>                         #creates the commit by merging the called branch to the current branch
 git merge --abort                          #rollback the repo as it was before the merge
