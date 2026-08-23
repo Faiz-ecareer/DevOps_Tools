@@ -1,9 +1,33 @@
-# Fundamentals
+# General
+docker info                                 # Broader information about the Docker Daemon
+docker version                              # Client and Server version in detail
+docker --help                               # Docker commands references
+systemctl enable --now docker               # Start and enable the Docker daemon to start at reboot
+systemctl status docker                     # Check daemon status
 
-docker --version                            # Complete Version
-docker compose version                      # Compose tool version
-docker run docker.io/library/hello-world    # Run from registry/library/image
-docker run hello-world                      # Run by searching default registry
-docker ps                                   # list running container
-docker ps -a                                # list all docker containers
-docker images                               # list all docker images stored locally
+# Containers
+docker ps                                   # Lists running containers.
+docker ps -a                                # Lists all containers.
+docker run <image>                          # Creates & runs the container in attached mode (searching the official library on the Docker Hub registry).
+docker run <username/image>                 # Creates & runs the container in attached mode (searching the user's private library on the Docker Hub registry).
+docker run -p <h_port:c_port> <image>       # Creates & runs the container with port mapping (Host_port:Container_port).
+docker run --name <container_name> <image>  # Creates, runs, & names the container.
+docker run -d <image>                       # Creates and runs the container in detached mode in the background. 
+docker attach <container_name/id>           # Attach to the running container.
+Ctrl + P/Q                                  # Detach from the running container without closing it.
+docker start <container_name/id>            # Starts the container from the list.
+docker stop <container_name/id>             # Stops the running container.
+docker rename <old_name> <new_name>         # Renaming the container.
+docker rm <container_name/id>               # Deletes the stopped container.
+docker rm -f <container_name/id>            # Deletes a running container.
+docker container prune                      # Deletes all the stopped containers (Clean up the list).
+
+# Images
+docker images                               # List all Docker images stored locally
+
+
+# Docker Hub
+
+
+
+
