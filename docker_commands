@@ -22,8 +22,10 @@ docker run <username/image>                 # Pulls & runs the container (privat
 docker run --name <container_name> <image>  # Pulls & runs with a custom named container in attached mode (stdout/stderr).
 docker run -d <image>                       # Pulls and runs the container in detached mode (background).
 docker run -it <image>                      # Pulls and runs the container with an interactive terminal (stdin, stdout/stderr).
-Ctrl + P, Q                                 # Detach from the running container without closing it.
+Ctrl + P & Q                                # Detach from the running container without closing it.
 docker attach <container_name/id>           # Reattach to the running container's PID 1 (without creating a new process).
+docker exec <container_name> <command>      # Runs command inside container (without interactive terminal).
+docker exec -it <container_name> <command>  # Runs command inside container (with interactive terminal).
 docker exec -it <container_name> <shell>    # Start a new shell inside the running container (creates a new process).
 Ctrl + D                                    # Closes the new shell inside the container.
 docker start <container_name/id>            # Starts the container from the container list in detached mode (background).
