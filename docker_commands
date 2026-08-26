@@ -25,8 +25,9 @@ docker run -it <image>                      # Pulls and runs the container with 
 Ctrl + P/Q                                  # Detach from the running container without closing it.
 docker attach <container_name/id>           # Reattach to the running container's PID 1 (without creating a new process).
 docker exec -it <container_name> <shell>    # Start a new shell inside the running container (creates a new process).
-Ctrl + C                                    # Closes the new shell inside the container.
-docker start <container_name/id>            # Starts the container from the list.
+Ctrl + D                                    # Closes the new shell inside the container.
+docker start <container_name/id>            # Starts the container from the container list.
+docker start -ai <container_name/id>        # Starts the container from the container list with interactive terminal (stdin, stdout/stderr).
 docker stop <container_name/id>             # Stops the running container.
 docker rename <old_name> <new_name>         # Renaming the container.
 docker rm <container_name/id>               # Deletes the stopped container.
