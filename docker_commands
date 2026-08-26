@@ -8,13 +8,13 @@ systemctl status docker                     # Check daemon status
 # Containers
 docker ps                                   # Lists running containers.
 docker ps -a                                # Lists all containers.
-docker run <image>                          # Creates & runs the container in attached mode (searching the official library on the Docker Hub registry).
-docker run <username/image>                 # Creates & runs the container in attached mode (searching the user's private library on the Docker Hub registry).
-docker run -p <h_port:c_port> <image>       # Creates & runs the container with port mapping (Host_port:Container_port).
-docker run --name <container_name> <image>  # Creates, runs, & names the container.
+docker run --name <container_name> <image>  # Creates & runs with a custom named container in attached mode (official Docker Hub library).
+docker run <image>                          # Creates & runs the container in attached mode (official Docker Hub library).
+docker run <username/image>                 # Creates & runs the container in attached mode (User's private Docker Hub library).
 docker run -d <image>                       # Creates and runs the container in detached mode in the background. 
 docker attach <container_name/id>           # Attach to the running container.
 Ctrl + P/Q                                  # Detach from the running container without closing it.
+docker run -p <h_port:c_port> <image>       # Creates & runs the container with Port Mapping (Host_port:Container_port).
 docker start <container_name/id>            # Starts the container from the list.
 docker stop <container_name/id>             # Stops the running container.
 docker rename <old_name> <new_name>         # Renaming the container.
