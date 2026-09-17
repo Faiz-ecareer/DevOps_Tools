@@ -114,9 +114,11 @@ umask <####>          # temporary modify default setting to subtract from 0777
 
 # Software Packages Management
 
-|---- apt (Debian) ----|
+|---- dpkg/apt (Debian) ----|
 
 apt search <keyword>  # Searches the package database for the exact keyword 
+apt update	      # Update packages information and versions without installing
+apt list --upgradable # Check for available updates without installing
 apt upgrade	      # Upgrade all installed packages
 apt install <package> # Install package
 apt remove <package>  # Delete package
@@ -124,10 +126,10 @@ apt show <package>    # Shows package details
 apt list --installed  # List installed packages
 apt list <package>    # Check package from the list
 
-|---- yum/dnf (Redhat) ----|
+|---- rpm/yum/dnf (Redhat) ----|
 
 dnf search <keyword>  # Searches the package database for the exact keyword
-dnf check-update      # Check for available packages	
+dnf check-update      # Check for available updates without installing	
 dnf update	      # Update package information and install updates
 dnf install <package> # Install package
 dnf remove <package>  # Delete package
