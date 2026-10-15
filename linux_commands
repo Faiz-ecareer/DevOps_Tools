@@ -5,7 +5,6 @@ whoami                # current user
 hostname              # name of the host machine
 
 echo $0               # current shell
-echo $$               # current PID
 bash                  # start new bash shell
 exec bash             # Replaces current shell with a new shell
 exit                  # logout of current shell
@@ -137,6 +136,15 @@ dnf info <package>    # Show package details
 dnf list installed    # List installed package
 dnf list <package>    # Check package from the list
 
+# Process Management
+
+echo $$               # Current shell's PID
+ps                    # Shows processes in your current terminal
+ps aux                # See all processes running on your system
+top                   # Live view of the processes
+
+
+# Service and Daemon
 
 
 
